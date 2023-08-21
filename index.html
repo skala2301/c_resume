@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carlos Iglesias - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Carlos Iglesias
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          krlos_2301@hotmail.com
+        </div>
+        <div style="clear:both;"></div>
+        <div class="contact_info">
+          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          +5371886876
+
+        </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <a class="topmenu" href="#skills">Skills</a>
+          <a class="topmenu" href="#projects">Projects</a>
+          <a class="topmenu" href="#recommendations">Recommendations</a>
+          
+          <!-- Add the links for Skills, Projects and Recommendation here -->
+
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="./html_finalprojimages/profile_avatar.gif" class="profile_image"/>
+      </div>
+
+      <div>
+          <h1>
+            Hi, I'm Carlos Iglesias! <img src="https://twemoji.maxcdn.com/2/72x72/1f44b.png" width="60px"/>
+          </h1>
+          <p>
+            I am a Mechatronic engineer with 3 years experience in drone (UAV) mantainance and repair.
+            I have worked as automation projects promoter and sales. 
+            I have been working in customer service for the last year and developed some simple automation solutions for case follow up using Microsoft Power Apps
+          </p>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+
+        <div class="skill">
+          <img src="html_finalprojimages/dji.png"/>
+          <h6>DJI products</h6>
+          <p>3 year experience use and repair</p>
+        </div>
+
+        <div class="skill">
+          <img src="html_finalprojimages/cpp.png"/>
+          <h6>C++</h6>
+          <p>1 year experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="html_finalprojimages/sql.png"/>
+          <h6>SQL</h6>
+          <p>proeficient</p>
+        </div>
+
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png"/>
+          <h6>HTML</h6>
+          <p>proeficient</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg"/>
+          <h6>JavaScript</h6>
+          <p>proeficient</p>
+        </div>  
+
+        <!-- Add more skills here -->
+        <div class="skill">
+          <img src="html_finalprojimages/CSS3.png"/>
+          <h6>CSS</h6>
+          <p>proeficient</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/excel.png"/>
+          <h6>Excel</h6>
+          <p>proeficient</p>
+        </div>
+
+        
+
+      </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Projects
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>UAV Tacometer</h3>
+            <ul>
+              <li>Developed a tacometer for UAV project using FPGA</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Remote Controlled Box for Delivery</h3>
+            <ul>
+              <li>Manufactured a Box with delivery system controlled by DJI Controlled integrated in Matrix 600</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Call follow up App with Power Apps</h3>
+            <ul>
+              <li>Created an interfase for customer service cases follow up</li>
+            </ul>
+          </div>
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Carlos is a hard worker searching for new challenges on his field, he is always heading for improvement
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Carlos is a great teamate, he cares about his coworkers and search to help them on their self improvement
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Working with Carlos is pleasant, he likes to plan and execute ideas seeking to do the best job possible.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)" id="new_recommendation_title"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <!--Add the code here for the logo to appear and the icon to be actionable-->
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h3>A new Comment will be added, are you sure to submmit it now?<!-- Add appropriate text here--></h3>
+      <button onclick="showPopup(false, true)">Confirm And Submmit</button>
+      <button onclick="showPopup(false, false)">Cancel</button>
+    </div>
+  </body>
+</html>
