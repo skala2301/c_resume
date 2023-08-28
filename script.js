@@ -1,3 +1,17 @@
+function load_comments(){
+  var my_comments=JSON.parse(localStorage.getItem("my_comments"));
+  if(my_comments!=null){
+    document.getElementById("all_recommendations").innerHTML=my_comments;
+    console.log("added ", my_comments);
+  } else {
+    console.log("No Comments");
+  } 
+      
+  
+}
+
+
+
 function addRecommendation() {
   // Get the message of the new recommendation
   showPopup(true)
@@ -29,22 +43,28 @@ function showPopup(bool, proceed) {
       recommendation_title="<b>"+recommendation_title+":</b><br/>"
     }
     // If the user has left a recommendation, display a pop-up
+    let new_comment_element="\<div class='recommendation'\>"+recommendation_title+"\<span\>&#8220;\</span\>"+recommendation+"\<span\>&#8221;\</span\>\</div\>";
     if (recommendation != null && recommendation.trim() != "") {
       console.log("New recommendation added");
-      //Call showPopup here
-
-      // Create a new 'recommendation' element and set it's value to the user's message
-      var element = document.createElement("div");
-      element.setAttribute("class","recommendation");
-
-      element.innerHTML = recommendation_title +"\<span\>&#8220;\</span\>" + recommendation + "\<span\>&#8221;\</span\>";
-      // Add this element to the end of the list of recommendations
-      document.getElementById("all_recommendations").appendChild(element); 
       
-      // Reset the value of the textarea
+      var my_comments=JSON.parse(localStorage.getItem("my_comments"));
+      if(my_comments!=null){
+        my_comments+=new_comment_element;
+        console.log("added ", my_comments);
+      } else {
+        my_comments=new_comment_element;
+        console.log("Elemento nulo");
+      } 
+      
+      document.getElementById("all_recommendations").innerHTML=my_comments;
+      localStorage.setItem("my_comments",JSON.stringify(my_comments));
       recommendation = "";
     }
   }else{
     return false
   }
+}
+
+function readtextFile(){
+
 }
