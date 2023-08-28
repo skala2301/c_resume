@@ -5,7 +5,7 @@ const appSettings={
 }
 
 const fireb_app=initalizeApp(appSettings);
-
+console.log(fireb_app);
 function load_comments(){
   var my_comments=JSON.parse(localStorage.getItem("my_comments"));
   if(my_comments!=null){
