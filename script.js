@@ -1,3 +1,11 @@
+import { initalizeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+
+const appSettings={
+  databaseURL:"https://first-project-75872-default-rtdb.firebaseio.com/"
+}
+
+const fireb_app=initalizeApp(appSettings);
+
 function load_comments(){
   var my_comments=JSON.parse(localStorage.getItem("my_comments"));
   if(my_comments!=null){
