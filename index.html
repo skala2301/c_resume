@@ -4,9 +4,10 @@
     <title>Carlos Iglesias - Portfolio</title>
     <link rel="stylesheet" href="./style.css"/>
     <script src="./script.js" type="module"></script>
+    <link rel="shortcut icon" href="#"/>
+    
   </head>
-  <body onload="load_comments()">
-    <!-- Navigation Bar -->
+  <body>
     <nav>
       <div id="home">
         <div class="profile_name">
@@ -27,8 +28,6 @@
           <a class="topmenu" href="#skills">Skills</a>
           <a class="topmenu" href="#projects">Projects</a>
           <a class="topmenu" href="#recommendations">Recommendations</a>
-          
-          <!-- Add the links for Skills, Projects and Recommendation here -->
 
         </div>
       </div>    
@@ -42,7 +41,7 @@
 
       <div>
           <h1>
-            Hi, I'm Carlos Iglesias! <img src="https://twemoji.maxcdn.com/2/72x72/1f44b.png" width="60px"/>
+            Hi, I'm Carlos Iglesias!
           </h1>
           <p>
             I am a Mechatronic engineer with 3 years experience in drone (UAV) mantainance and repair.
@@ -144,9 +143,11 @@
       <h2>Recommendations</h2>
       <div style="clear:both;"></div>
       <div class="all_recommendations" id="all_recommendations">
-       
+        
       </div>
     </section>
+    <!-- <embed type="text/html" src="comment.html" height="400"> -->
+
 
     <!-- Recommendation Form -->
     <section id="contact">
@@ -156,26 +157,40 @@
           <input type="text" placeholder="Name (Optional)" id="new_recommendation_title"> <br/>
           <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
           <div class="flex_center">
-            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+            <button id="recommend_btn" >Submit</button><!--onclick="addRecommendation()"-->
           </div>
         </fieldset>
+
+      
       </div>
     </section>
 
     <div class="iconbutton">
       <a href="#home">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" \
+          d="  M 15,11.25
+              l -3,-3 
+              l -3,3
+              m 3,-3
+              v 7.5
+              " />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke="hsla(0, 100%, 100%, 0.4)"\
+          d="  M 21 12
+                a 9 9 0 11-18 0 9 9 0 0118 0
+              " />
         </svg>
-        <!--Add the code here for the logo to appear and the icon to be actionable-->
       </a>
     </div>
 
     <div class="popup" id="popup" class="flex_center">
       <img src="html_finalprojimages/checkmark--outline.svg"/>
-      <h3>A new Comment will be added, are you sure to submmit it now?<!-- Add appropriate text here--></h3>
-      <button onclick="showPopup(false, true)">Confirm And Submmit</button>
-      <button onclick="showPopup(false, false)">Cancel</button>
+      <h3>A new Comment will be added, are you sure to submmit it now?</h3>
+      <button id="confirm_btn">Confirm And Submmit</button><!--onclick="showPopup(false, true)"-->
+      <button id="cancel_btn">Cancel</button><!--onclick="showPopup(false, false)"-->
     </div>
+    <script src="my_module.mjs" type="module"> </script>
   </body>
 </html>
+
+
