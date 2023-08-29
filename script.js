@@ -1,4 +1,4 @@
-import * as my_db from "./my_module.mjs"
+import * as my_db from "./db_manager.js"
 //load elements to be used from the html doc
 var btnAddRecommendation=document.getElementById("recommend_btn")
 var btnConfirm=document.getElementById("confirm_btn")
