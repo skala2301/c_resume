@@ -1,11 +1,8 @@
-import { initalizeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 
-const appSettings={
-  databaseURL:"https://first-project-75872-default-rtdb.firebaseio.com/"
-}
+var btnAddRecommendation=document.getElementById("recommend_btn")
+var btnConfirm=document.getElementById("confirm_btn")
+var btnCancel=document.getElementById("cancel_btn")
 
-const fireb_app=initalizeApp(appSettings);
-console.log(fireb_app);
 function load_comments(){
   var my_comments=JSON.parse(localStorage.getItem("my_comments"));
   if(my_comments!=null){
@@ -14,8 +11,6 @@ function load_comments(){
   } else {
     console.log("No Comments");
   } 
-      
-  
 }
 
 
@@ -25,7 +20,7 @@ function addRecommendation() {
   showPopup(true)
 
 }
-
+/*
 function showPopup(bool) {
   if (bool) {
     document.getElementById('recommend_btn').disabled=true
@@ -35,8 +30,11 @@ function showPopup(bool) {
     document.getElementById('popup').style.visibility = 'hidden'
   }
 }
+*/
 
-function showPopup(bool, proceed) {
+
+
+function showPopup(bool, proceed=false) {
   if (bool) {
     document.getElementById('recommend_btn').disabled=true
     document.getElementById('popup').style.visibility = 'visible'
@@ -76,3 +74,11 @@ function showPopup(bool, proceed) {
 function readtextFile(){
 
 }
+
+document.addEventListener("DOMContentLoaded",load_comments)
+btnConfirm.addEventListener("click", function(){showPopup(false,true)})
+btnCancel.addEventListener("click", function(){showPopup(false,false)})
+btnAddRecommendation.addEventListener("click", function(){addRecommendation()})
+
+
+
